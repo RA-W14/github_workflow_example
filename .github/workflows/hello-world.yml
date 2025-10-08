@@ -18,7 +18,7 @@ jobs:
           python-version: '3.10'
 
       - name: Run tests
-        run: python main.py
+        run: python test.py
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v1
