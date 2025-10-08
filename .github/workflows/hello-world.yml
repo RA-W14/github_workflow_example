@@ -1,4 +1,4 @@
-name: Test, Build and Release
+name: Test and Release
 
 on: [push]
 
@@ -18,7 +18,7 @@ jobs:
           python-version: '3.10'
 
       - name: Run tests
-        run: python test.py
+        run: python main.py
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v1
@@ -27,14 +27,5 @@ jobs:
           name: Release v1.0.${{ github.run_number }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      # - name: Check if main.py exists
-      #   run: |
-      #     if [ ! -f main.py ]; then
-      #       echo "main.py does not exist!"
-      #       exit 0
-      #     else
-      #       echo "main.py exists!"
-      #     fi
 
       
