@@ -1,0 +1,1 @@
+print("My favorite food is sushi!")
