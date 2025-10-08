@@ -13,7 +13,7 @@ jobs:
         run: |
           if [ ! -f main.py ]; then
             echo "main.py does not exist!"
-            exit 0
+            exit 1
           else
             echo "main.py exists!"
           fi
