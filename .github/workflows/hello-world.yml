@@ -9,14 +9,14 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Check if main.py exists
-        run: |
-          if [ ! -f main.py ]; then
-            echo "main.py does not exist!"
-            exit 0
-          else
-            echo "main.py exists!"
-          fi
+      # - name: Check if main.py exists
+      #   run: |
+      #     if [ ! -f main.py ]; then
+      #       echo "main.py does not exist!"
+      #       exit 0
+      #     else
+      #       echo "main.py exists!"
+      #     fi
 
       - name: Set up Python
         uses: actions/setup-python@v4
